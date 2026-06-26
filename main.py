@@ -19,6 +19,11 @@ depthbuffer = numpy.zeros(RESOLUTION, dtype=numpy.float32)
 
 FOV = numpy.radians(70)
 camera = Camera()
+
+camera.position[2] = -15
+camera.position[1] = 5
+camera.rotation[0] = .25
+
 camera.f = (RESOLUTION[0] / 2) / numpy.tan(FOV / 2)
 
 pygame.event.set_grab(True)
