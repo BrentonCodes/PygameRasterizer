@@ -28,6 +28,9 @@ def load_scene(path):
 		transform, name = scene.graph[node_name]
 		mesh = scene.geometry[name]
 
+		model.mesh.vertex_normals = mesh.vertex_normals
+		model.mesh.face_normals = mesh.face_normals
+
 		model.mesh.vertices = mesh.vertices.astype(numpy.float32)
 		model.mesh.faces = mesh.faces.astype(numpy.uint32)
 

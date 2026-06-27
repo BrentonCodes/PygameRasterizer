@@ -7,6 +7,8 @@ class Mesh:
 		self.vertices = []
 		self.faces = []
 		self.uvs = []
+		self.vertex_normals = []
+		self.face_normals = []
 
 class Model:
 
@@ -28,3 +30,11 @@ class Camera:
 		self.position = numpy.zeros(3, dtype=numpy.float32)
 
 		self.f = 0
+
+class PointLight:
+
+	def __init__(self):
+
+		self.position = numpy.zeros(3, dtype=numpy.float32)
+		self.color = numpy.zeros(3, dtype=numpy.float32)
+		self.intensity = 1
